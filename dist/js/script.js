@@ -1,3 +1,4 @@
+alert('OK')
 
 function searchMovies(search) {
    $.ajax({
