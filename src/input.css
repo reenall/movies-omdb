@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   @apply bg-slate-900;
+ }
+ 
+ ::-webkit-scrollbar {
+   @apply w-[5px] h-[5px];
+ }
+ 
+ ::-webkit-scrollbar-track {
+   @apply bg-transparent;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   @apply bg-slate-800 hover:bg-slate-700 rounded-full;
+ }
+
+ .nav-item > a {
+   @apply text-sm text-slate-300 hover:text-slate-500 transition-all duration-300 
+ }
+
+ .search-bar {
+   @apply w-full py-2 rounded-full text-center text-sm text-slate-700 focus:outline-none 
+   md:w-[80%] 
+   lg:w-[50%] 2xl:w-[40%]
+ }
+
+.card-wrapper {
+  @apply 
+  grid grid-cols-2 justify-center gap-3
+  sm:grid-cols-3
+  lg:flex lg:flex-wrap lg:gap-10
+}
+
+.card {
+   @apply relative w-[150px] h-[228px] mb-5 mx-auto rounded-xl shadow-2xl overflow-hidden bg-center bg-cover bg-black
+   hover:cursor-pointer hover:brightness-50 transition-all duration-300
+   md:w-[200px] md:h-[304px]
+   lg:mx-0 lg:mb-0
+   xl:w-[250px] xl:h-[375px]
+}
+
+.card img {
+  @apply w-full h-full
+}
+
+.card-type {
+   @apply absolute top-0 left-0 flex justify-center items-center w-[60px] h-[30px] rounded-br-2xl
+   text-xs text-black font-semibold bg-yellow-500
+   md:w-[75px] md:h-[38px] md:text-sm
+}
+
+.card-title {
+   @apply absolute bottom-0 flex flex-wrap justify-center items-end px-3 pb-0 w-full h-[40%]
+   font-medium text-center text-yellow-400 text-xs
+   bg-gradient-to-b from-black/0 via-black/70 to-black/90
+   md:text-sm md:pb-0
+   lg:pb-1
+   xl:pb-2
+}
+
+
+/* ----- Modal Box ----- */
+.modal-bg {
+  @apply absolute z-0 top-0 bottom-0 left-0 right-0 bg-center bg-cover brightness-[25%] 
+  md:hidden
+}
+
+.modal-duration {
+  @apply absolute top-1 left-1 w-[60px] h-[60px]
+}
+
+.modal-rating {
+  @apply absolute top-0 right-0 flex gap-2 justify-center items-center px-5 py-2 rounded-bl-2xl bg-yellow-400 text-sm md:text-base
+}
+
+.modal-header {
+  @apply relative flex flex-wrap gap-2 justify-center 
+  text-xs font-medium text-secondary
+}
+
+.modal-title {
+  @apply text-center text-yellow-500 text-xl font-bold w-full
+}
+
+.modal-body {
+  @apply relative grid gap-4 px-5 text-sm text-primary font-medium max-h-[270px] md:max-h-[320px] overflow-auto
+}
+
+.modal-body::-webkit-scrollbar {
+  @apply w-[2px];
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 hover:bg-slate-400 rounded-full;
+}
+
+/* .modal-close-btn {
+  @apply absolute bottom-12 left-[50%] -translate-x-28 px-20 py-1 rounded-full
+  bg-yellow-400 font-semibold hover:brightness-75 transition-all
+} */
+
+.modal-close-btn {
+  @apply px-20 py-1 rounded-full
+  bg-yellow-400 font-semibold hover:brightness-75 transition-all
+}
